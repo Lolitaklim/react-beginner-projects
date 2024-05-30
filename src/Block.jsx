@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-const defaultCurrencies = ['RUB', 'USD', 'EUR', 'GBP'];
+const defaultCurrencies = ['RUB', 'USD', 'EUR', 'GEL']
 
 export const Block = ({ value, currency, onChangeValue, onChangeCurrency }) => (
   <div className="block">
@@ -9,7 +9,8 @@ export const Block = ({ value, currency, onChangeValue, onChangeCurrency }) => (
         <li
           onClick={() => onChangeCurrency(cur)}
           className={currency === cur ? 'active' : ''}
-          key={cur}>
+          key={cur}
+        >
           {cur}
         </li>
       ))}
@@ -27,4 +28,4 @@ export const Block = ({ value, currency, onChangeValue, onChangeCurrency }) => (
       placeholder={0}
     />
   </div>
-);
+)
